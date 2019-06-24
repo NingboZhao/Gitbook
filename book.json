@@ -1,0 +1,87 @@
+{
+  "title": "NingboZhao",
+  "author": "NingboZhao",
+  "description": "",
+  "language": "zh-hans",
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  },
+  "plugins": [
+    "theme-comscore", 
+    "prism",
+    "-highlight",
+    "copy-code-button",
+    "search-pro",
+    "-search",
+    "-lunr",
+    "expandable-chapters",
+    "expandable-chapters-small",
+    "-splitter",
+    "-sharing",
+    "tbfed-pagefooter",
+    "baidu-tongji",
+    "anchor-navigation-ex",
+    "multipart"
+  ],
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "NingboZhao",
+          "repo": "document-library", 
+          "type": "star",
+          "count": true,
+          "size": "small"
+        }, 
+        {
+          "user": "NingboZhao",
+          "width": "160", 
+          "type": "follow", 
+          "count": true,
+          "size": "small"
+        }
+      ]
+    },
+    "donate": {
+      "button": "打赏",
+      "alipayText": "支付宝打赏",
+      "wechatText": "微信打赏",
+      "alipay": "",
+      "wechat": ""
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ],
+      "lang": {
+        "shell": "bash"
+      }
+    },
+    
+    "anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": false,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
+
+    "theme-default": {
+            "showLevel": false
+        },
+    "tbfed-pagefooter": {
+      "modify_label": "Update：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "baidu-tongji": {
+      "token": ""
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.book-summary ul.summary li.active>a {
+    color: #702da8;
+ /*   background: 0 0; */
+    text-decoration: none;
+}
+
+.book .book-summary ul.summary li a, .book .book-summary ul.summary li span {
+    font-size: 10px;
+}
+
+.book .book-summary .exc-trigger {
+       top: 8px;
+}
+
+
+
+.gitbook-link {
+  display: none !important;
+}
+.summary .divider {
+  display: none !important;
+}
+
+element.style {
+    background: white;
+}
+
+.markdown-section h1 {
+    color: #702da8;
+}
+
+.book.without-animation .book-summary {
+  /*   background-color: white; */
+}
+
+
+nav {
+    line-height: 50%;
+}
+
+.book-summary {
+    border-right: 0px solid rgba(0,0,0,.07);
+    width: 250px;
+}
+
+#book-search-input {
+    border-bottom: 0px solid rgba(0,0,0,.07);
+}
+
+.book.with-summary .book-body {
+    left: 250px;
+}
