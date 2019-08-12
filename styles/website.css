@@ -50,3 +50,39 @@ nav {
 .book.with-summary .book-body {
     left: 250px;
 }
+
+#anchor-navigation-ex-navbar {
+      border: 0px solid rgba(0, 0, 0, .07);
+      border-radius: 0px;
+      box-shadow: 0 0px 0px rgba(0, 0, 0, .175);
+      padding: 10px 10px;
+      max-height: 100%;
+      max-width: 17%;
+      right: 30px;
+      top: 30px;
+      }
+
+#anchorNavigationExGoTop {
+    position: 0;
+    }
+
+.panel {
+  border: 0px solid transparent;
+    }
+
+.page-inner {
+      max-width: 650px;
+    }
+
+
+#anchor-navigation-ex-navbar ul li a {
+  font-size: 8px;
+      }
+
+#anchorNavigationExGoTop {
+  border: 0px solid rgba(0, 0, 0, .07);
+      padding: 0px 0px;
+          font-size: 0px;
+        }        
+  
+
