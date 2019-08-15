@@ -86,3 +86,23 @@ nav {
         }        
   
 
+body {
+    font-family: "Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+
+.book.font-family-1 {
+    font-family: "Trebuchet MS","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.book-summary {
+    font-family: "Trebuchet MS","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.markdown-section table td, .markdown-section table th {
+    border: 0px solid #ddd;
+}
+
+.markdown-section table tr {
+    border-top: 0.5px solid #EDEDED;
+}

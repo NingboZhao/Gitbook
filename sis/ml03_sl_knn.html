@@ -1,0 +1,1409 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>回归/分类 KNN · NingboZhao</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="NingboZhao">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ml03_sl_decision_tree.html" />
+    
+    
+    <link rel="prev" href="ml03_sl_svm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Summary.html">
+            
+                <a href="../Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sis/0ningbozhao.html">
+            
+                <a href="../sis/0ningbozhao.html">
+            
+                    
+                    Ningbo Zhao
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sis/datascience.html">
+            
+                <a href="../sis/datascience.html">
+            
+                    
+                    数据科学知识模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../sis/test.html">
+            
+                <a href="../sis/test.html">
+            
+                    
+                    test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计量统计</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="sis统计学要解决什么问题.html">
+            
+                <a href="sis统计学要解决什么问题.html">
+            
+                    
+                    统计学要解决什么问题？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="sis统计学大纲.html">
+            
+                <a href="sis统计学大纲.html">
+            
+                    
+                    统计学大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="sis时间序列.html">
+            
+                <a href="sis时间序列.html">
+            
+                    
+                    时间序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="sis逐波序列.html">
+            
+                <a href="sis逐波序列.html">
+            
+                    
+                    逐波序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="sis生物信息效益.html">
+            
+                <a href="sis生物信息效益.html">
+            
+                    
+                    生物信息效益
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">机器学习</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="math00.html">
+            
+                <a href="math00.html">
+            
+                    
+                    机器学习的数学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ml降维.html">
+            
+                <a href="ml降维.html">
+            
+                    
+                    降维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ml信息熵.html">
+            
+                <a href="ml信息熵.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ml神经网络.html">
+            
+                <a href="ml神经网络.html">
+            
+                    
+                    模拟神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    📓 监督学习
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ml03_supervised_learning.html">
+            
+                <a href="ml03_supervised_learning.html">
+            
+                    
+                    监督学习和无监督学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="ml03_sl_linear_regression.html">
+            
+                <a href="ml03_sl_linear_regression.html">
+            
+                    
+                    回归 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="ml03_sl_logistic_regression.html">
+            
+                <a href="ml03_sl_logistic_regression.html">
+            
+                    
+                    分类 逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="ml03_sl_svm.html">
+            
+                <a href="ml03_sl_svm.html">
+            
+                    
+                    分类 SVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.10" data-path="ml03_sl_knn.html">
+            
+                <a href="ml03_sl_knn.html">
+            
+                    
+                    回归/分类 KNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="ml03_sl_decision_tree.html">
+            
+                <a href="ml03_sl_decision_tree.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="ml03_sl_bayes.html">
+            
+                <a href="ml03_sl_bayes.html">
+            
+                    
+                    贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="ml03_sl_xgboost.html">
+            
+                <a href="ml03_sl_xgboost.html">
+            
+                    
+                    XGBoost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" >
+            
+                <span>
+            
+                    
+                    📓 无监督学习
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="mlkmeans.html">
+            
+                <a href="mlkmeans.html">
+            
+                    
+                    K-Means
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="ml03_ul_em.html">
+            
+                <a href="ml03_ul_em.html">
+            
+                    
+                    EM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.17" data-path="ml03_ul_pca.html">
+            
+                <a href="ml03_ul_pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">可视化</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="vizAwesome_dataviz.html">
+            
+                <a href="vizAwesome_dataviz.html">
+            
+                    
+                    Awesome dataviz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="vizQGIS.html">
+            
+                <a href="vizQGIS.html">
+            
+                    
+                    QGIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据分析</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="sqlHive时间函数.html">
+            
+                <a href="sqlHive时间函数.html">
+            
+                    
+                    Hive 时间函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="shell.html">
+            
+                <a href="shell.html">
+            
+                    
+                    使用 Shell 发邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    Leecode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../sis/leecode185.html">
+            
+                <a href="../sis/leecode185.html">
+            
+                    
+                    185. 部门工资前三高的员工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../sis/leecode601.html">
+            
+                <a href="../sis/leecode601.html">
+            
+                    
+                    601. 体育馆的人流量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../sis/leecode615.html">
+            
+                <a href="../sis/leecode615.html">
+            
+                    
+                    615. 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="../sis/leecode618.html">
+            
+                <a href="../sis/leecode618.html">
+            
+                    
+                    618. 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">课程</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    人大统计硕士笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    中国特色社会主义理论与实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    高等统计学(数理统计学)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    统计思想综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    抽样技术与方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    专业外语（英语）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    马克思主义与社会科学方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    《资本论》选读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    多元统计分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    数据挖掘方法与应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    定性数据研究方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    统计预测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    宏观经济统计分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    经济统计研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    统计诊断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    市场研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    资本存量估算研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.18" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    针对中国的综合环境经济核算实施与建模研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.19" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    全球化背景下中国对外经济统计与计量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.20" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    环境经济核算国际经验追踪及环境会计研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.21" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    中国信息服务业发展与影响研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">blog</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201908 旧金山
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201802 北京
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201704 Trips in Nanjing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201703 Hot Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201702 日本 北海道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201904 日本 东京
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201801 日本 历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201701 日本 东京博物馆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201902 北京 法源寺
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../sis/blog加州伯克利东亚图书馆.html">
+            
+                <a href="../sis/blog加州伯克利东亚图书馆.html">
+            
+                    
+                    201909 加州大学伯克利分校东亚图书馆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201907 北京 雍和宫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201801 北京 八大处
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201010 北京 海淀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201903 北京 草场地第3年
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.15" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201904 沈阳 再见东北
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    2019 旧金山
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.17" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    2018 北京
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.18" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201004 泰拉瑞亚
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.19" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201308 大学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.20" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201301 高考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" >
+            
+                <span>
+            
+                    
+                    赵宁波(Ningbo Zhao)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" >
+            
+                <span>
+            
+                    
+                    数据分析师，目前在美团工作。
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" >
+            
+                <span>
+            
+                    
+                    邮箱：ningincn@hotmail.com
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >回归/分类 KNN</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#knn---&#x56DE;&#x5F52;&#x5206;&#x7C7B;"><b></b>KNN---&#x56DE;&#x5F52;/&#x5206;&#x7C7B;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x56FE;&#x89E3;knn"><b></b>1.&#x56FE;&#x89E3;KNN</a></li><li><span class="title-icon "></span><a href="#2k&#x503C;&#x7684;&#x9009;&#x62E9;"><b></b>2.K&#x503C;&#x7684;&#x9009;&#x62E9;</a></li></ul></ul></ul></div><a href="#knn---&#x56DE;&#x5F52;&#x5206;&#x7C7B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="knn---&#x56DE;&#x5F52;&#x5206;&#x7C7B;"><a name="knn---&#x56DE;&#x5F52;&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#knn---&#x56DE;&#x5F52;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>KNN---&#x56DE;&#x5F52;/&#x5206;&#x7C7B;</h1>
+<h3 id="1&#x56FE;&#x89E3;knn"><a name="1&#x56FE;&#x89E3;knn" class="anchor-navigation-ex-anchor" href="#1&#x56FE;&#x89E3;knn"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/wz1l4i#943a35fa" target="_blank"></a>1.&#x56FE;&#x89E3;KNN</h3>
+<p>     <a href="resources/88EFAC2BA3BA0DB076ED32D22472660E.png" rel="grouped" title="3.KNN&#x5206;&#x7C7B;.png" target="_self" class="fancybox">
+       <img src="resources/88EFAC2BA3BA0DB076ED32D22472660E.png" alt="3.KNN&#x5206;&#x7C7B;.png">
+     </a></p>
+<p> knn&#x7684;&#x53D8;&#x79CD;&#x7B97;&#x6CD5;&#xFF1A;KD&#x6811;&#x3001;&#x7403;&#x6811;&#x3002;&#xFF08;KD&#x6811;&#xFF0C; &#x7403;&#x6811;&#x4E4B;&#x7C7B;&#x7684;&#x6A21;&#x578B;&#x5EFA;&#x7ACB;&#x9700;&#x8981;&#x5927;&#x91CF;&#x7684;&#x5185;&#x5B58;&#xFF09;</p>
+<h3 id=""><a href="https://www.yuque.com/u170062/yw5ver/wz1l4i#d41d8cd9" target="_blank"></a></h3>
+<h3 id="2k&#x503C;&#x7684;&#x9009;&#x62E9;"><a name="2k&#x503C;&#x7684;&#x9009;&#x62E9;" class="anchor-navigation-ex-anchor" href="#2k&#x503C;&#x7684;&#x9009;&#x62E9;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/wz1l4i#51b30883" target="_blank"></a>2.K&#x503C;&#x7684;&#x9009;&#x62E9;</h3>
+<p>&#x5BF9;&#x4E8E;k&#x503C;&#x7684;&#x9009;&#x62E9;&#xFF0C; &#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x7ECF;&#x9A8C;&#xFF0C; &#x4E00;&#x822C;&#x6839;&#x636E;&#x6837;&#x672C;&#x7684;&#x5206;&#x5E03;&#xFF0C; &#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x8F83;&#x5C0F;&#x7684;&#x503C;&#xFF0C; &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;k&#x503C;&#x3002;
+&#x9009;&#x62E9;&#x8F83;&#x5C0F;&#x7684;k&#x503C;&#xFF0C; &#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x7528;&#x8F83;&#x5C0F;&#x7684;&#x9886;&#x57DF;&#x4E2D;&#x7684;&#x8BAD;&#x7EC3;&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#xFF0C; &#x8BAD;&#x7EC3;&#x8BEF;&#x5DEE;&#x4F1A;&#x51CF;&#x5C0F;&#xFF0C; &#x5BB9;&#x6613;&#x53D1;&#x751F;&#x8FC7;&#x62DF;&#x5408;&#x3002;
+&#x9009;&#x62E9;&#x8F83;&#x5927;&#x7684;k&#x503C;&#xFF0C; &#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x7528;&#x8F83;&#x5927;&#x9886;&#x57DF;&#x4E2D;&#x7684;&#x8BAD;&#x7EC3;&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#xFF0C; &#x5176;&#x4F18;&#x70B9;&#x662F;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x6CDB;&#x5316;&#x8BEF;&#x5DEE;&#xFF0C; &#x4F46;&#x7F3A;&#x70B9;&#x662F;&#x8BAD;&#x7EC3;&#x8BEF;&#x5DEE;&#x4F1A;&#x589E;&#x5927;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ml03_sl_svm.html" class="navigation navigation-prev " aria-label="Previous page: 分类 SVM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ml03_sl_decision_tree.html" class="navigation navigation-next " aria-label="Next page: 决策树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"回归/分类 KNN","level":"3.10","depth":1,"next":{"title":"决策树","level":"3.11","depth":1,"path":"Sis/ml03_sl_decision_tree.md","ref":"Sis/ml03_sl_decision_tree.md","articles":[]},"previous":{"title":"分类 SVM","level":"3.9","depth":1,"path":"Sis/ml03_sl_svm.md","ref":"Sis/ml03_sl_svm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-theme-comscore","-prism","highlight","-copy-code-button","search-pro","-search","-lunr","expandable-chapters","expandable-chapters-small","-splitter","-sharing","-tbfed-pagefooter","baidu-tongji","anchor-navigation-ex","multipart","-mathjax","katex","fancybox","pageview-count","mermaid-gb3","sectionx"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy NingboZhao 2019","modify_label":"Update：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"fancybox":{"helpers":{"buttons":{}}},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":""},"search-pro":{},"multipart":{},"donate":{"button":"打赏","alipayText":"支付宝打赏","wechatText":"微信打赏","alipay":"","wechat":""},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"pageview-count":{},"github-buttons":{"buttons":[{"user":"NingboZhao","repo":"document-library","type":"star","count":true,"size":"small"},{"user":"NingboZhao","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"NingboZhao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NingboZhao","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Sis/ml03_sl_knn.md","mtime":"2019-08-15T05:35:20.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T05:40:35.612Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

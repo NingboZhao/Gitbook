@@ -1,0 +1,1534 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>分类 逻辑回归 · NingboZhao</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="NingboZhao">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ml03_sl_svm.html" />
+    
+    
+    <link rel="prev" href="ml03_sl_linear_regression.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Summary.html">
+            
+                <a href="../Summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sis/0ningbozhao.html">
+            
+                <a href="../sis/0ningbozhao.html">
+            
+                    
+                    Ningbo Zhao
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sis/datascience.html">
+            
+                <a href="../sis/datascience.html">
+            
+                    
+                    数据科学知识模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../sis/test.html">
+            
+                <a href="../sis/test.html">
+            
+                    
+                    test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计量统计</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="sis统计学要解决什么问题.html">
+            
+                <a href="sis统计学要解决什么问题.html">
+            
+                    
+                    统计学要解决什么问题？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="sis统计学大纲.html">
+            
+                <a href="sis统计学大纲.html">
+            
+                    
+                    统计学大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="sis时间序列.html">
+            
+                <a href="sis时间序列.html">
+            
+                    
+                    时间序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="sis逐波序列.html">
+            
+                <a href="sis逐波序列.html">
+            
+                    
+                    逐波序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="sis生物信息效益.html">
+            
+                <a href="sis生物信息效益.html">
+            
+                    
+                    生物信息效益
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">机器学习</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="math00.html">
+            
+                <a href="math00.html">
+            
+                    
+                    机器学习的数学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ml降维.html">
+            
+                <a href="ml降维.html">
+            
+                    
+                    降维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ml信息熵.html">
+            
+                <a href="ml信息熵.html">
+            
+                    
+                    信息熵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ml神经网络.html">
+            
+                <a href="ml神经网络.html">
+            
+                    
+                    模拟神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    📓 监督学习
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ml03_supervised_learning.html">
+            
+                <a href="ml03_supervised_learning.html">
+            
+                    
+                    监督学习和无监督学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="ml03_sl_linear_regression.html">
+            
+                <a href="ml03_sl_linear_regression.html">
+            
+                    
+                    回归 线性回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.8" data-path="ml03_sl_logistic_regression.html">
+            
+                <a href="ml03_sl_logistic_regression.html">
+            
+                    
+                    分类 逻辑回归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="ml03_sl_svm.html">
+            
+                <a href="ml03_sl_svm.html">
+            
+                    
+                    分类 SVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="ml03_sl_knn.html">
+            
+                <a href="ml03_sl_knn.html">
+            
+                    
+                    回归/分类 KNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="ml03_sl_decision_tree.html">
+            
+                <a href="ml03_sl_decision_tree.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="ml03_sl_bayes.html">
+            
+                <a href="ml03_sl_bayes.html">
+            
+                    
+                    贝叶斯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="ml03_sl_xgboost.html">
+            
+                <a href="ml03_sl_xgboost.html">
+            
+                    
+                    XGBoost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" >
+            
+                <span>
+            
+                    
+                    📓 无监督学习
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="mlkmeans.html">
+            
+                <a href="mlkmeans.html">
+            
+                    
+                    K-Means
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="ml03_ul_em.html">
+            
+                <a href="ml03_ul_em.html">
+            
+                    
+                    EM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.17" data-path="ml03_ul_pca.html">
+            
+                <a href="ml03_ul_pca.html">
+            
+                    
+                    PCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">可视化</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="vizAwesome_dataviz.html">
+            
+                <a href="vizAwesome_dataviz.html">
+            
+                    
+                    Awesome dataviz
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="vizQGIS.html">
+            
+                <a href="vizQGIS.html">
+            
+                    
+                    QGIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据分析</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="sqlHive时间函数.html">
+            
+                <a href="sqlHive时间函数.html">
+            
+                    
+                    Hive 时间函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="shell.html">
+            
+                <a href="shell.html">
+            
+                    
+                    使用 Shell 发邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <span>
+            
+                    
+                    Leecode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../sis/leecode185.html">
+            
+                <a href="../sis/leecode185.html">
+            
+                    
+                    185. 部门工资前三高的员工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.2" data-path="../sis/leecode601.html">
+            
+                <a href="../sis/leecode601.html">
+            
+                    
+                    601. 体育馆的人流量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.3" data-path="../sis/leecode615.html">
+            
+                <a href="../sis/leecode615.html">
+            
+                    
+                    615. 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3.4" data-path="../sis/leecode618.html">
+            
+                <a href="../sis/leecode618.html">
+            
+                    
+                    618. 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">课程</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    人大统计硕士笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    中国特色社会主义理论与实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    高等统计学(数理统计学)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    统计思想综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    抽样技术与方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    专业外语（英语）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    马克思主义与社会科学方法论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    《资本论》选读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    多元统计分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    数据挖掘方法与应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    定性数据研究方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    统计预测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.13" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    宏观经济统计分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.14" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    经济统计研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.15" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    统计诊断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.16" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    市场研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.17" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    资本存量估算研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.18" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    针对中国的综合环境经济核算实施与建模研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.19" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    全球化背景下中国对外经济统计与计量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.20" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    环境经济核算国际经验追踪及环境会计研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.21" data-path="../sis/blog人大统计硕士笔记.html">
+            
+                <a href="../sis/blog人大统计硕士笔记.html">
+            
+                    
+                    中国信息服务业发展与影响研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">blog</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201908 旧金山
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201802 北京
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201704 Trips in Nanjing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201703 Hot Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201702 日本 北海道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201904 日本 东京
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201801 日本 历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201701 日本 东京博物馆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201902 北京 法源寺
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="../sis/blog加州伯克利东亚图书馆.html">
+            
+                <a href="../sis/blog加州伯克利东亚图书馆.html">
+            
+                    
+                    201909 加州大学伯克利分校东亚图书馆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201907 北京 雍和宫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.12" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201801 北京 八大处
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.13" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201010 北京 海淀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.14" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201903 北京 草场地第3年
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.15" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201904 沈阳 再见东北
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.16" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    2019 旧金山
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.17" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    2018 北京
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.18" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201004 泰拉瑞亚
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.19" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201308 大学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.20" data-path="../sis/0.html">
+            
+                <a href="../sis/0.html">
+            
+                    
+                    201301 高考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">About</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" >
+            
+                <span>
+            
+                    
+                    赵宁波(Ningbo Zhao)
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" >
+            
+                <span>
+            
+                    
+                    数据分析师，目前在美团工作。
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" >
+            
+                <span>
+            
+                    
+                    邮箱：ningincn@hotmail.com
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >分类 逻辑回归</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;"><b></b>&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#1&#x95EE;&#x9898;&#x5F15;&#x51FA;"><b></b>1.&#x95EE;&#x9898;&#x5F15;&#x51FA;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;generalized-linear-model"><b></b>&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;(generalized linear model)</a></li><li><span class="title-icon "></span><a href="#&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;"><b></b>&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x53D8;&#x6362;"><b></b>&#x903B;&#x8F91;&#x53D8;&#x6362;</a></li></ul><li><span class="title-icon "></span><a href="#2&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x516C;&#x5F0F;"><b></b>2.&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x516C;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#21-&#x635F;&#x5931;&#x51FD;&#x6570;"><b></b>2.1 &#x635F;&#x5931;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#22-&#x4EA4;&#x53C9;&#x71B5;"><b></b>2.2 &#x4EA4;&#x53C9;&#x71B5;</a></li><li><span class="title-icon "></span><a href="#23-&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><b></b>2.3 &#x68AF;&#x5EA6;&#x4E0B;&#x964D;</a></li></ul><li><span class="title-icon "></span><a href="#3&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;"><b></b>3.&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;</a></li><ul><li><span class="title-icon "></span><a href="#31-softmax"><b></b>3.1 softmax</a></li></ul></ul></ul></div><a href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;"><a name="&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x56DE;&#x5F52;---&#x5206;&#x7C7B;</h1>
+<h2 id="1&#x95EE;&#x9898;&#x5F15;&#x51FA;"><a name="1&#x95EE;&#x9898;&#x5F15;&#x51FA;" class="anchor-navigation-ex-anchor" href="#1&#x95EE;&#x9898;&#x5F15;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#oxP0R" target="_blank"></a>1.&#x95EE;&#x9898;&#x5F15;&#x51FA;</h2>
+<p>&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x4E2D;&#xFF0C;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x4F1A;&#x9047;&#x5230;&#x5BF9;&#x6570;&#x636E;&#x65E0;&#x6CD5;&#x5206;&#x7C7B;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>     <a href="resources/97D8FA9587DFEF0F88ED68EE55DC8FA8.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/97D8FA9587DFEF0F88ED68EE55DC8FA8.png" alt="image.png">
+     </a></p>
+<p>&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x7684;y&#x53D6;&#x503C;&#x8303;&#x56F4;&#x4E3A;&#xFF1A;     <a href="resources/6419B0C026B15F5331DD69FC944B4660.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/6419B0C026B15F5331DD69FC944B4660.png" alt="image.png">
+     </a>&#xFF0C;&#x5BF9;&#x4E8E;&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#xFF08;&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x4E5F;&#x53EF;&#x4EE5;&#x8F6C;&#x4E3A;&#x4E3A;&#x4E8C;&#x5206;&#x7C7B;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A;&#x601D;&#x8DEF;&#x6765;&#x601D;&#x8003;&#x89E3;&#x51B3;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x65E0;&#x6CD5;&#x5206;&#x7C7B;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x5F03;&#x7528;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF0C;&#x6539;&#x4E3A;&#x975E;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF1B;</li>
+<li>&#x5C06;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x6620;&#x5C04;&#x5230;&#x9AD8;&#x7EF4;&#x7A7A;&#x95F4;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x7528;&#x8D85;&#x5E73;&#x9762;&#x6765;&#x5206;&#x7C7B;&#xFF1B;</li>
+<li>&#x4F7F;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x503C;&#x903C;&#x8FD1;&#x771F;&#x5B9E;&#x503C;&#x7684;&#x884D;&#x751F;&#x7269;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;     <a href="resources/15142C18451663267E03F1FEB8789D60.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/15142C18451663267E03F1FEB8789D60.png" alt="image.png">
+     </a>&#xFF0C;&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x5C06; z &#x503C;&#x8F6C;&#x4E3A;&#xFF08;0,1&#xFF09;&#x8303;&#x56F4;&#x5185;&#x7684;&#x9884;&#x6D4B;&#x503C;&#xFF0C;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x5206;&#x7C7B;&#x4EFB;&#x52A1;&#x3002;&#x7C7B;&#x4F3C;&#x5355;&#x4F4D;&#x9636;&#x8DC3;&#x51FD;&#x6570;&#xFF08;unit-step function&#xFF09;:      <a href="resources/33C2339E6B950F82415CC951D3929D18.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/33C2339E6B950F82415CC951D3929D18.png" alt="image.png">
+     </a></li>
+</ul>
+<p>&#xFF08;&#x5355;&#x4F4D;&#x9636;&#x8DC3;&#x51FD;&#x6570;&#x4E0D;&#x8FDE;&#x7EED;&#xFF09;</p>
+<h3 id="&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;generalized-linear-model"><a name="&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;generalized-linear-model" class="anchor-navigation-ex-anchor" href="#&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;generalized-linear-model"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#0wG9Q" target="_blank"></a>&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;(generalized linear model)</h3>
+<p>     <a href="resources/A6FB56B6A582DB58637E4CE0A9BB1257.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/A6FB56B6A582DB58637E4CE0A9BB1257.png" alt="image.png">
+     </a></p>
+<p>     <a href="resources/F6CE55593CDDB0F45B156793D29D5357.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/F6CE55593CDDB0F45B156793D29D5357.png" alt="image.png">
+     </a>&#x79F0;&#x4E3A;&#x8054;&#x7CFB;&#x51FD;&#x6570;&#xFF08;link function&#xFF09;&#x3002;&#x6839;&#x636E;&#x4EE5;&#x4E0A;&#x601D;&#x8DEF;&#xFF0C;&#x5047;&#x5982;&#x80FD;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5355;&#x8C03;&#x53EF;&#x5FAE;&#x51FD;&#x6570;&#xFF0C;<strong>&#x53EF;&#x4EE5;&#x5C06;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x503C;&#x548C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x4E2D;&#x7684;&#x771F;&#x5B9E;&#x6807;&#x8BB0;y&#x8054;&#x7CFB;&#x8D77;&#x6765;</strong>&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x7528;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x89E3;&#x51B3;&#x4E86;&#x4E8C;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;&#xFF08;logistic function&#xFF09;&#x5C31;&#x662F;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x8C03;&#x53EF;&#x5FAE;&#x51FD;&#x6570;&#x3002;</p>
+<h3 id="&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;"><a name="&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#M8Nuc" target="_blank"></a>&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;</h3>
+<p>     <a href="resources/DEDCAC2FFFAB6AEB7B185F5C5EF8F27D.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/DEDCAC2FFFAB6AEB7B185F5C5EF8F27D.png" alt="image.png">
+     </a></p>
+<p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x610F;&#x8BD1;&#x4E3A;&#x5BF9;&#x6570;&#xFF08;logit&#xFF09;&#x51E0;&#x7387;&#x56DE;&#x5F52;&#x3002;&#x6839;&#x636E;&#x4EE5;&#x4E0A;&#x601D;&#x8DEF;&#xFF0C;&#x7528;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x503C;&#x53BB;&#x903C;&#x8FD1;&#x771F;&#x5B9E;&#x6807;&#x8BB0;&#x7684;&#x884D;&#x751F;&#x7269;&#xFF0C;&#x5373;&#x771F;&#x5B9E;&#x6807;&#x8BB0;&#x7684;<strong>&#x5BF9;&#x6570;&#x51E0;&#x7387;</strong>&#xFF08;log odds &#x6216; logit&#xFF09;&#xFF0C;&#x51E0;&#x7387;&#x8868;&#x793A;&#x6837;&#x672C;&#x4E3A;&#x6B63;&#x4F8B;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x4E0E;&#x53CD;&#x4F8B;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x7684;&#x6BD4;&#x503C;&#xFF0C;&#x51E0;&#x7387;&#x53D6;&#x5BF9;&#x6570;&#x5C31;&#x5F97;&#x5230;&#x5BF9;&#x6570;&#x51E0;&#x7387;&#xFF1A;     <a href="resources/C3FA325DE91DC98CAEF47C057254BCFE.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/C3FA325DE91DC98CAEF47C057254BCFE.png" alt="image.png">
+     </a></p>
+<h3 id="&#x903B;&#x8F91;&#x53D8;&#x6362;"><a name="&#x903B;&#x8F91;&#x53D8;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x53D8;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#0rJtX" target="_blank"></a>&#x903B;&#x8F91;&#x53D8;&#x6362;</h3>
+<p>&#x5C06;&#x5BF9;&#x6570;&#x51E0;&#x7387;&#x51FD;&#x6570;&#x4EE3;&#x5165;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF0C;&#x5F97;&#x5230;     <a href="resources/60FBA86FC44ED73AF6AA317C60A6B46B.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/60FBA86FC44ED73AF6AA317C60A6B46B.png" alt="image.png">
+     </a>&#xFF1B;</p>
+<p>&#x7528;&#x9884;&#x6D4B;&#x503C;&#x6BD5;&#x7ADF;&#x771F;&#x5B9E;&#x6807;&#x8BB0;&#x7684;&#x5BF9;&#x6570;&#x51E0;&#x7387;&#xFF0C;&#x5F97;&#x5230;     <a href="resources/F7761946D1BC34805EF481B21676F82E.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/F7761946D1BC34805EF481B21676F82E.png" alt="image.png">
+     </a>&#xFF0C;&#x5373;     <a href="resources/60FBA86FC44ED73AF6AA317C60A6B46B.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/60FBA86FC44ED73AF6AA317C60A6B46B.png" alt="image.png">
+     </a>&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x903B;&#x8F91;&#x53D8;&#x6362;&#xFF0C;&#x5C06;&#x7EBF;&#x6027;&#x56DE;&#x5F52;&#x7684;&#x9884;&#x6D4B;&#x503C;&#x4ECE;     <a href="resources/6419B0C026B15F5331DD69FC944B4660.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/6419B0C026B15F5331DD69FC944B4660.png" alt="image.png">
+     </a>&#xFF0C;&#x7F29;&#x653E;&#x5230;&#x4E86;(0,1)&#xFF0C;&#x4EE3;&#x8868;&#x5BF9;&#x5206;&#x7C7B;&#x7C7B;&#x522B;&#x7684;<strong>&#x6982;&#x7387;&#x9884;&#x6D4B;</strong>&#x3002;</p>
+<p>&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x4E5F;&#x662F;<strong>&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;</strong>&#x7684;&#x4E00;&#x79CD;&#x3002;</p>
+<h2 id="2&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x516C;&#x5F0F;"><a name="2&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x516C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#2&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x516C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#SjF7B" target="_blank"></a>2.&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x516C;&#x5F0F;</h2>
+<p>     <a href="resources/16E00C19CE88CFFCB5D6FC6469382E51.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/16E00C19CE88CFFCB5D6FC6469382E51.png" alt="image.png">
+     </a>&#xFF0C;&#x5728;&#x5750;&#x6807;&#x8F74;&#x4E0A;&#x8868;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>     <a href="resources/3FD4B41970A20BAB2C37D24AD2F8150E.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/3FD4B41970A20BAB2C37D24AD2F8150E.png" alt="image.png">
+     </a></p>
+<h3 id="21-&#x635F;&#x5931;&#x51FD;&#x6570;"><a name="21-&#x635F;&#x5931;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#21-&#x635F;&#x5931;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#odr5g" target="_blank"></a>2.1 &#x635F;&#x5931;&#x51FD;&#x6570;</h3>
+<p>&#x786E;&#x5B9A;&#x4E86;&#x4E00;&#x7EC4;w &#x6216; theta &#x5C31;&#x786E;&#x5B9A;&#x4E86; z&#xFF0C;&#x786E;&#x5B9A;&#x4E86;z &#x5C31;&#x786E;&#x5B9A;&#x4E86; g(z) &#x7684;&#x8F93;&#x51FA;, &#x90A3;&#x4E48;g(z) &#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210; g(w,x)&#x3002;</p>
+<p>&#x6839;&#x636E;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#xFF0C;     <a href="resources/1B48ECD6EBE8DF98E9FF5865D10EB436.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/1B48ECD6EBE8DF98E9FF5865D10EB436.png" alt="image.png">
+     </a>&#xFF0C;&#x8FDB;&#x800C;&#x8868;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>     <a href="resources/E838274CE7BDBD75B909118F15C6061F.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/E838274CE7BDBD75B909118F15C6061F.png" alt="image.png">
+     </a></p>
+<p>&#x4E3A;&#x4E86;&#x6A21;&#x578B;&#x9884;&#x6D4B;&#x6709;&#x6700;&#x9AD8;&#x7684;&#x51C6;&#x786E;&#x7387;&#xFF0C;&#x5373;&#x627E;&#x5230;&#x4E00;&#x7EC4;theta&#x503C;&#xFF0C;&#x4F7F;&#x4F3C;&#x7136;&#x4F30;&#x8BA1;&#x7684;L(theta)&#x6709;&#x6700;&#x5927;&#x503C;&#x3002;&#x4E3A;&#x4E86;&#x5C06;&#x4E58;&#x79EF;&#x5C55;&#x5F00;&#xFF0C;&#x7B49;&#x5F0F;&#x4E24;&#x8FB9;&#x53D6;&#x5BF9;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x5BF9;&#x6570;&#x51FD;&#x6570;&#x6700;&#x5927;&#x65F6;&#xFF08;&#x5355;&#x8C03;&#x9012;&#x589E;&#xFF09;&#xFF0C;L(theta)&#x4E5F;&#x6700;&#x5927;&#x3002;</p>
+<p>     <a href="resources/DB04458D40D7AA339304BAD8B99B3968.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/DB04458D40D7AA339304BAD8B99B3968.png" alt="image.png">
+     </a></p>
+<p>&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>     <a href="resources/8813A2144215BEE6271286EA8085DFE3.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/8813A2144215BEE6271286EA8085DFE3.png" alt="image.png">
+     </a></p>
+<p>&#x4EE5;&#x4E0A;&#x635F;&#x5931;&#x51FD;&#x6570;&#x53C8;&#x53EB;<strong>&#x4EA4;&#x53C9;&#x71B5;</strong>&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF08;Cross Entropy Loss&#xFF09;&#x3002;</p>
+<h3 id="22-&#x4EA4;&#x53C9;&#x71B5;"><a name="22-&#x4EA4;&#x53C9;&#x71B5;" class="anchor-navigation-ex-anchor" href="#22-&#x4EA4;&#x53C9;&#x71B5;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#Xx3nv" target="_blank"></a>2.2 &#x4EA4;&#x53C9;&#x71B5;</h3>
+<p>&#x71B5; (entropy) &#x8FD9;&#x4E00;&#x8BCD;&#x6700;&#x521D;&#x6765;&#x6E90;&#x4E8E;&#x70ED;&#x529B;&#x5B66;&#x3002;1948&#x5E74;&#xFF0C;<strong>&#x514B;&#x52B3;&#x5FB7;&#xB7;&#x7231;&#x5C14;&#x4F0D;&#x5FB7;&#xB7;&#x9999;&#x519C;&#x5C06;&#x70ED;&#x529B;&#x5B66;&#x4E2D;&#x7684;&#x71B5;&#x5F15;&#x5165;&#x4FE1;&#x606F;&#x8BBA;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x9999;&#x519C;&#x71B5; (Shannon entropy)&#xFF0C;&#x4FE1;&#x606F;&#x71B5; (information entropy)&#x3002;&#x71B5;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x6216;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;<strong>&#x4E0D;&#x786E;&#x5B9A;&#x6027;</strong>&#xFF0C;&#x71B5;&#x8D8A;&#x5927;&#xFF0C;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x6216;&#x7CFB;&#x7EDF;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x5C31;&#x8D8A;&#x5927;&#x3002;</p>
+<p>&#x4E00;&#x6761;&#x4FE1;&#x606F;&#x7684;&#x4FE1;&#x606F;&#x91CF;&#x5927;&#x5C0F;&#x548C;&#x5B83;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x6709;&#x76F4;&#x63A5;&#x7684;&#x5173;&#x7CFB;&#x3002;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#xFF0C;<strong>&#x4FE1;&#x606F;&#x91CF;</strong>&#x7684;&#x5EA6;&#x91CF;&#x5C31;&#x7B49;&#x4E8E;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x7684;&#x591A;&#x5C11;&#xFF0C;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x591A;&#x5C11;&#x53EF;&#x4EE5;&#x7528;&#x6982;&#x7387;&#x5206;&#x5E03;&#x6765;&#x8868;&#x8FBE;&#xFF0C;&#x4FE1;&#x606F;&#x7684;&#x91CF;&#x5EA6;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;<strong>&#x6982;&#x7387;&#x5206;&#x5E03; p(x)</strong>&#x3002;</p>
+<h4 id="&#x4FE1;&#x606F;&#x91CF;"><a name="&#x4FE1;&#x606F;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x4FE1;&#x606F;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#tKonq" target="_blank"></a>&#x4FE1;&#x606F;&#x91CF;</h4>
+<p>&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;&#x4E0D;&#x76F8;&#x5173;&#x7684;&#x4E8B;&#x4EF6; x &#x548C; y&#xFF0C;&#x90A3;&#x4E48;&#x4E24;&#x4E2A;&#x4E8B;&#x4EF6;&#x540C;&#x65F6;&#x53D1;&#x751F;&#x65F6;&#x83B7;&#x5F97;&#x7684;&#x4FE1;&#x606F;&#x91CF;&#x5E94;&#x8BE5;&#x7B49;&#x4E8E;&#x89C2;&#x5BDF;&#x5230;&#x4E8B;&#x4EF6;&#x5404;&#x81EA;&#x53D1;&#x751F;&#x65F6;&#x83B7;&#x5F97;&#x7684;&#x4FE1;&#x606F;&#x4E4B;&#x548C;&#xFF1A;     <a href="resources/F4EE449EEC5877641A708EFBFD1C6022.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/F4EE449EEC5877641A708EFBFD1C6022.png" alt="image.png">
+     </a>&#xFF0C;&#x4E24;&#x4E2A;&#x4E8B;&#x4EF6;&#x662F;&#x5F7C;&#x6B64;&#x72EC;&#x7ACB;&#x7684;&#xFF1A;     <a href="resources/5B8E69EAD3A3BEC14637DB980575799A.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/5B8E69EAD3A3BEC14637DB980575799A.png" alt="image.png">
+     </a>
+I(x) &#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x968F;&#x673A;&#x53D8;&#x91CF; xx &#x7684;&#x81EA;&#x4FE1;&#x606F; (self-information)&#xFF0C;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x6240;&#x5E26;&#x6765;&#x7684;&#x4FE1;&#x606F;&#x91CF;&#x3002;     <a href="resources/4A30777AAE627EE57F52ED359EAF7345.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/4A30777AAE627EE57F52ED359EAF7345.png" alt="image.png">
+     </a></p>
+<p>     <a href="resources/98A230F074D18883A847E65CB8E29F4F.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/98A230F074D18883A847E65CB8E29F4F.png" alt="image.png">
+     </a></p>
+<h4 id="&#x71B5;"><a name="&#x71B5;" class="anchor-navigation-ex-anchor" href="#&#x71B5;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#hn8nx" target="_blank"></a>&#x71B5;</h4>
+<p>     <a href="resources/A641CE17488F4A91C08712B2D30F84A5.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/A641CE17488F4A91C08712B2D30F84A5.png" alt="image.png">
+     </a></p>
+<p>H(X) &#x88AB;&#x79F0;&#x4E3A;<strong>&#x968F;&#x673A;&#x53D8;&#x91CF; x &#x7684;&#x71B5;</strong>,&#x8868;&#x793A;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x5EA6;&#x91CF;&#xFF0C;&#x662F;&#x5BF9;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x4EF6;&#x4EA7;&#x751F;&#x7684;&#x4FE1;&#x606F;&#x91CF;&#x7684;<strong>&#x671F;&#x671B;</strong>&#x3002;&#x4ECE;&#x516C;&#x5F0F;&#x53EF;&#x5F97;&#xFF0C;&#x968F;&#x673A;&#x53D8;&#x91CF;&#x7684;&#x53D6;&#x503C;&#x4E2A;&#x6570;&#x8D8A;&#x591A;&#xFF0C;&#x72B6;&#x6001;&#x6570;&#x4E5F;&#x5C31;&#x8D8A;&#x591A;&#xFF0C;&#x4FE1;&#x606F;&#x71B5;&#x5C31;&#x8D8A;&#x5927;&#xFF0C;&#x6DF7;&#x4E71;&#x7A0B;&#x5EA6;&#x5C31;&#x8D8A;&#x5927;&#x3002;&#x5F53;&#x968F;&#x673A;&#x5206;&#x5E03;&#x4E3A;&#x5747;&#x5300;&#x5206;&#x5E03;&#x65F6;&#xFF0C;&#x71B5;&#x6700;&#x5927;&#xFF0C;&#x4E14; 0&#x2264;H(X)&#x2264;logn&#x3002;</p>
+<h4 id="&#x4EA4;&#x53C9;&#x71B5;"><a name="&#x4EA4;&#x53C9;&#x71B5;" class="anchor-navigation-ex-anchor" href="#&#x4EA4;&#x53C9;&#x71B5;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#wR4dh" target="_blank"></a>&#x4EA4;&#x53C9;&#x71B5;</h4>
+<p>&#x73B0;&#x5728;&#x6709;&#x5173;&#x4E8E;&#x6837;&#x672C;&#x96C6;&#x7684;&#x4E24;&#x4E2A;&#x6982;&#x7387;&#x5206;&#x5E03; p(x) &#x548C; q(x)&#xFF0C;&#x5176;&#x4E2D; p(x) &#x4E3A;&#x771F;&#x5B9E;&#x5206;&#x5E03;&#xFF0C; q(x) &#x975E;&#x771F;&#x5B9E;&#x5206;&#x5E03;&#x3002;</p>
+<p>&#x7528;&#x771F;&#x5B9E;&#x5206;&#x5E03; p(x)&#x6765;&#x8861;&#x91CF;&#x8BC6;&#x522B;&#x522B;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x6240;&#x9700;&#x8981;&#x7F16;&#x7801;&#x957F;&#x5EA6;&#x7684;&#x671F;&#x671B;&#xFF08;&#x5E73;&#x5747;&#x7F16;&#x7801;&#x957F;&#x5EA6;&#xFF09;&#x4E3A;:</p>
+<p>     <a href="resources/52DEFF08E4181027327D921C0ED7E0B8.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/52DEFF08E4181027327D921C0ED7E0B8.png" alt="image.png">
+     </a></p>
+<p>&#x4F7F;&#x7528;&#x975E;&#x771F;&#x5B9E;&#x5206;&#x5E03; q(x)&#x6765;&#x8868;&#x793A;&#x6765;&#x81EA;&#x771F;&#x5B9E;&#x5206;&#x5E03; p(x) &#x7684;&#x5E73;&#x5747;&#x7F16;&#x7801;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x662F;&#xFF1A;</p>
+<p>     <a href="resources/7AA049774A0B6CE03A6BA1412999ED14.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/7AA049774A0B6CE03A6BA1412999ED14.png" alt="image.png">
+     </a></p>
+<p>&#x6B64;&#x65F6;&#x5C31;&#x5C06;H(p,q) &#x79F0;&#x4E4B;&#x4E3A;&#x4EA4;&#x53C9;&#x71B5;&#x3002;&#x4EA4;&#x53C9;&#x71B5;&#x7528;&#x6765;&#x8861;&#x91CF;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x771F;&#x5B9E;&#x5206;&#x5E03;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x975E;&#x771F;&#x5B9E;&#x5206;&#x5E03;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x7B56;&#x7565;&#x6D88;&#x9664;&#x7CFB;&#x7EDF;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x6240;&#x9700;&#x8981;&#x4ED8;&#x51FA;&#x6210;&#x672C;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x4EA4;&#x53C9;&#x7684;&#x5B57;&#x9762;&#x610F;&#x601D;&#x5728;&#x4E8E;&#xFF1A;<strong>&#x771F;&#x5B9E;&#x5206;&#x5E03;&#x4E0E;&#x975E;&#x771F;&#x5B9E;&#x5206;&#x5E03;&#x7684;&#x4EA4;&#x53C9;</strong>&#x3002;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x65B9;&#x6848;, &#x8D8A;&#x4F18;&#x7684;&#x7B56;&#x7565;, &#x6700;&#x7EC8;&#x7684;&#x4EA4;&#x53C9;&#x71B5;&#x8D8A;&#x4F4E;&#xFF0C;&#x5177;&#x6709;&#x6700;&#x4F4E;&#x7684;&#x4EA4;&#x53C9;&#x71B5;&#x7684;&#x7B56;&#x7565;&#x5C31;&#x662F;&#x6700;&#x4F18;&#x5316;&#x7B56;&#x7565;&#x3002;</p>
+<p>&#x4EA4;&#x53C9;&#x71B5;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x201C;&#x5B66;&#x4E60;&#x6A21;&#x578B;&#x7684;&#x5206;&#x5E03;&#x201D;&#x548C;&#x201C;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x201D;&#x4E4B;&#x95F4;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5F53;&#x4EA4;&#x53C9;&#x71B5;&#x6700;&#x4F4E;&#xFF08;&#x7B49;&#x4E8E;&#x8BAD;&#x7EC3;&#x6570;&#x636E;&#x5206;&#x5E03;&#x7684;&#x71B5;&#xFF09;&#x65F6;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x5B66;&#x5230;&#x4E86;&#x6700;&#x597D;&#x7684;&#x6A21;&#x578B;&#x3002;</p>
+<h3 id="23-&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><a name="23-&#x68AF;&#x5EA6;&#x4E0B;&#x964D;" class="anchor-navigation-ex-anchor" href="#23-&#x68AF;&#x5EA6;&#x4E0B;&#x964D;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#a6fSy" target="_blank"></a>2.3 &#x68AF;&#x5EA6;&#x4E0B;&#x964D;</h3>
+<p>&#x901A;&#x8FC7;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF0C;&#x6700;&#x5C0F;&#x5316;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF1A;&#xFF08;&#x4EE5;&#x4E0B;&#x7684;theta&#x5C31;&#x662F; w&#xFF0C;&#x4EE3;&#x8868;&#x53C2;&#x6570;&#xFF09;</p>
+<p>     <a href="resources/2585F98778CFBFD7D19951DCCE5A6DD4.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/2585F98778CFBFD7D19951DCCE5A6DD4.png" alt="image.png">
+     </a></p>
+<p>     <a href="resources/F0CC0C166418CD40C6AE9FEDA51C998E.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/F0CC0C166418CD40C6AE9FEDA51C998E.png" alt="image.png">
+     </a></p>
+<h2 id="3&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;"><a name="3&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#3&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#SJFFe" target="_blank"></a>3.&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;</h2>
+<p>&#x591A;&#x5206;&#x7C7B;&#x95EE;&#x9898;&#x7684;&#x89E3;&#x51B3;&#x601D;&#x8DEF;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;n&#x5206;&#x7C7B;&#x8F6C;&#x6210;n&#x4E2A;2&#x5206;&#x7C7B; &#xFF0C;&#x8BAD;&#x7EC3;&#x51FA;n&#x4E2A;&#x903B;&#x8F91;&#x56DE;&#x5F52;&#x7684;&#x6A21;&#x578B; &#xFF1B;</li>
+<li>&#x7528;softmax&#x5904;&#x7406;&#x591A;&#x5206;&#x7C7B;</li>
+</ul>
+<h3 id="31-softmax"><a name="31-softmax" class="anchor-navigation-ex-anchor" href="#31-softmax"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.yuque.com/u170062/yw5ver/clgwef#lBzQ0" target="_blank"></a>3.1 softmax</h3>
+<p><strong>&#x9884;&#x6D4B;&#x51FD;&#x6570;&#xFF1A;</strong></p>
+<p>     <a href="resources/D866127141189E48704DB75E1C8C2E4C.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/D866127141189E48704DB75E1C8C2E4C.png" alt="image.png">
+     </a></p>
+<p>&#x4E3A;&#x4E86;&#x9884;&#x6D4B;&#x7C7B;&#x522B;&#xFF0C;&#x9700;&#x8981;&#x786E;&#x5B9A;&#x7684;&#x662F;&#xFF1A;     <a href="resources/CD9F421636731AD09128C495E10A7A4B.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="resources/CD9F421636731AD09128C495E10A7A4B.png" alt="">
+     </a></p>
+<p><strong>&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF1A;</strong></p>
+<p><strong>     <a href="resources/976CBE9786FB8E5616602E64094C10D0.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/976CBE9786FB8E5616602E64094C10D0.png" alt="image.png">
+     </a></strong></p>
+<p><strong>&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF1A;</strong></p>
+<p><strong>     <a href="resources/2992012FF27F0D427406C203135E8DD8.png" rel="grouped" title="image.png" target="_self" class="fancybox">
+       <img src="resources/2992012FF27F0D427406C203135E8DD8.png" alt="image.png">
+     </a></strong></p>
+<p><strong>
+</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ml03_sl_linear_regression.html" class="navigation navigation-prev " aria-label="Previous page: 回归 线性回归">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ml03_sl_svm.html" class="navigation navigation-next " aria-label="Next page: 分类 SVM">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"分类 逻辑回归","level":"3.8","depth":1,"next":{"title":"分类 SVM","level":"3.9","depth":1,"path":"Sis/ml03_sl_svm.md","ref":"Sis/ml03_sl_svm.md","articles":[]},"previous":{"title":"回归 线性回归","level":"3.7","depth":1,"path":"Sis/ml03_sl_linear_regression.md","ref":"Sis/ml03_sl_linear_regression.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-theme-comscore","-prism","highlight","-copy-code-button","search-pro","-search","-lunr","expandable-chapters","expandable-chapters-small","-splitter","-sharing","-tbfed-pagefooter","baidu-tongji","anchor-navigation-ex","multipart","-mathjax","katex","fancybox","pageview-count","mermaid-gb3","sectionx"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy NingboZhao 2019","modify_label":"Update：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"fancybox":{"helpers":{"buttons":{}}},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":""},"search-pro":{},"multipart":{},"donate":{"button":"打赏","alipayText":"支付宝打赏","wechatText":"微信打赏","alipay":"","wechat":""},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"pageview-count":{},"github-buttons":{"buttons":[{"user":"NingboZhao","repo":"document-library","type":"star","count":true,"size":"small"},{"user":"NingboZhao","width":"160","type":"follow","count":true,"size":"small"}]},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"NingboZhao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NingboZhao","language":"zh-hans","gitbook":"*","description":""},"file":{"path":"Sis/ml03_sl_logistic_regression.md","mtime":"2019-08-15T05:35:20.113Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-15T05:40:35.612Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
